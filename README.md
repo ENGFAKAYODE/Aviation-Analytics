@@ -4,7 +4,7 @@
 This project is part of the "SQL Projects on Aviation" series developed by **Afriq IQ (2025)**. It focuses on extracting actionable business intelligence from a relational database representing an airline's operations. The project simulates a real-world environment where data analysts must solve complex business scenarios ranging from fleet management to revenue optimization.
 
 ## OBJECTIVE
-The primary objective is to demonstrate proficiency in **Data Query Language (DQL)** by solving over 40 specific business scenarios. The project aims to convert raw operational data covering passengers, bookings, flights, and crew into structured insights that support strategic decision-making for the airline.
+The primary objective is to demonstrate proficiency in **Data Query Language (DQL)** by solving over 50 specific business scenarios. The project aims to convert raw operational data covering passengers, bookings, flights, and crew into structured insights that support strategic decision-making for the airline.
 
 ## PROBLEM STATEMENT
 The airline requires a comprehensive data system to address critical operational blind spots, specifically:
@@ -12,12 +12,20 @@ The airline requires a comprehensive data system to address critical operational
 * **Fleet Management:** Tracking plane utilization rates (identifying under/over-utilized aircraft) and monitoring fleet age for maintenance or retirement decisions.
 * **Customer Segmentation:** Analyzing passenger demographics (age/gender) and travel patterns to tailor marketing campaigns.
 * **Revenue Optimization:** Identifying top revenue-generating flights and analyzing performance across different ticket classes and price ranges.
+* **Workforce Allocation Risks:** Lacking visibility into cumulative flight hours for crew members, making it difficult to proactively identify burnout risks or regulatory non-compliance.
+* **Demand Volatility Drivers:** Experiencing unpredictable fluctuations in monthly booking volumes without the granular data needed to attribute these spikes to specific seasons or routes.
+* **Booking Pipeline Leakage:** Inability to distinguish between legitimate cancellations, system errors, or abandoned carts for bookings that never reach "Confirmed" status.
+* **Pricing Strategy Effectiveness:** Unclear alignment between current ticket pricing tiers and actual customer demand, particularly regarding the performance of budget vs. premium ticket classes.
 
 ## GOALS
 * **Revenue Optimization:** Rank flights and airports by monthly revenue to identify profitable routes.
 * **Customer Loyalty:** Design a data-driven tier system (Platinum, Gold, Silver, Bronze) to reward frequent flyers.
 * **Fleet Optimization:** Categorize planes by utilization status and age to optimize scheduling and maintenance.
 * **Operational Monitoring:** Track booking status trends (Confirmed vs. Cancelled) to assess overall booking health.
+* **Optimize Workforce Planning:** Develop a monitoring system for crew utilization to ensure balanced workloads and strict compliance with aviation safety regulations.
+* **Maximize Revenue Yield:** Analyze booking lead times to implement dynamic pricing strategies—capitalizing on last-minute business travelers while securing early cash flow from leisure travelers.
+* **Strategic Route Expansion:** Evaluate the financial efficiency of airport hubs (e.g., DFW vs. ORD) to guide data-driven decisions on where to open new routes or reduce capacity.
+* **Targeted Customer Acquisition:** Construct a clear demographic profile of the "core customer" to shift marketing budgets away from broad channels toward high-conversion platforms.
 
 ## SKILLS DEMONSTRATED
 * **Advanced Joins:** Connecting multiple tables (`Passengers`, `Bookings`, `Flights`, `Planes`, `Tickets`) to create a unified view of operations.
@@ -25,6 +33,9 @@ The airline requires a comprehensive data system to address critical operational
 * **CTEs (Common Table Expressions):** Simplifying complex logic for monthly revenue and crew flight hour calculations.
 * **Conditional Aggregation:** Pivoting data using `CASE WHEN` to analyze booking statuses and age distribution.
 * **Date Manipulation:** Utilizing `DATEDIFF`, `DATEPART`, and `DATENAME` for lead-time analysis, age calculation, and seasonality trends.
+* **Data Quality Analysis:** Auditing datasets for logical inconsistencies (e.g., negative flight duration) and missing values (e.g., `NULL` booking dates) to ensure reporting accuracy.
+* **String Manipulation:** Formatting and concatenating text data (e.g., `CONCAT` for full names) to create reader-friendly reports.
+* **Mathematical Computations:** Calculating percentages (e.g., Month-over-Month growth, Seat Utilization %) and handling data type conversions using `CAST`.
 
 ## DATA OVERVIEW
 The database consists of the following relational tables based on the schema diagram:
