@@ -23,7 +23,7 @@ The airline requires a comprehensive data system to address critical operational
 * **Fleet Optimization:** Categorize planes by utilization status and age to optimize scheduling and maintenance.
 * **Operational Monitoring:** Track booking status trends (Confirmed vs. Cancelled) to assess overall booking health.
 * **Optimize Workforce Planning:** Develop a monitoring system for crew utilization to ensure balanced workloads and strict compliance with aviation safety regulations.
-* **Maximize Revenue Yield:** Analyze booking lead times to implement dynamic pricing strategies—capitalizing on last-minute business travelers while securing early cash flow from leisure travelers.
+* **Maximize Revenue Yield:** Analyze booking lead times to implement dynamic pricing strategies.
 * **Strategic Route Expansion:** Evaluate the financial efficiency of airport hubs (e.g., DFW vs. ORD) to guide data-driven decisions on where to open new routes or reduce capacity.
 * **Targeted Customer Acquisition:** Construct a clear demographic profile of the "core customer" to shift marketing budgets away from broad channels toward high-conversion platforms.
 
