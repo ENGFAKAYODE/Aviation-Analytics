@@ -8,10 +8,10 @@ The primary objective is to demonstrate proficiency in **Data Query Language (DQ
 
 ## PROBLEM STATEMENT
 The airline requires a comprehensive data system to address critical operational blind spots, specifically:
-* **Operational Efficiency:** Identifying flight delays and calculating the specific revenue lost due to these delays to improve efficiency [cite: 221-223].
-* **Fleet Management:** Tracking plane utilization rates (identifying under/over-utilized aircraft) and monitoring fleet age for maintenance or retirement decisions [cite: 244-246, 315-317].
-* **Customer Segmentation:** Analyzing passenger demographics (age/gender) and travel patterns to tailor marketing campaigns [cite: 194-196, 256].
-* **Revenue Optimization:** Identifying top revenue-generating flights and analyzing performance across different ticket classes and price ranges [cite: 188-190, 232-233, 355].
+* **Operational Efficiency:** Identifying flight delays and calculating the specific revenue lost due to these delays to improve efficiency.
+* **Fleet Management:** Tracking plane utilization rates (identifying under/over-utilized aircraft) and monitoring fleet age for maintenance or retirement decisions.
+* **Customer Segmentation:** Analyzing passenger demographics (age/gender) and travel patterns to tailor marketing campaigns.
+* **Revenue Optimization:** Identifying top revenue-generating flights and analyzing performance across different ticket classes and price ranges.
 
 ## GOALS
 * **Revenue Optimization:** Rank flights and airports by monthly revenue to identify profitable routes.
@@ -31,19 +31,19 @@ The database consists of the following relational tables based on the schema dia
 
 | Table Name | Description | Key Columns |
 | :--- | :--- | :--- |
-| **Passengers** | Stores customer personal data. | [cite_start]`PassengerID`, `FirstName`, `LastName`, `DateOfBirth`, `Gender` [cite: 25-32] |
-| **Bookings** | Links passengers to flights and tracks status. | [cite_start]`BookingID`, `PassengerID`, `FlightID`, `BookingDate`, `Status` [cite: 34-39] |
-| **Tickets** | Detailed pricing and seat info for bookings. | [cite_start]`TicketID`, `BookingID`, `SeatNumber`, `Class`, `Price` [cite: 26, 42-45] |
-| **Flights** | Operational flight schedules and routes. | [cite_start]`FlightID`, `FlightNumber`, `DepartureAirport`, `ArrivalAirport`, `DepartureTime`, `PlaneID` [cite: 68-75] |
-| **Planes** | Fleet inventory, capacity, and specs. | [cite_start]`PlaneID`, `Model`, `Capacity`, `Manufacturer`, `YearOfManufacture`, `Status` [cite: 76-82] |
-| **Crew** | Employee and assignment data. | [cite_start]`CrewID`, `FirstName`, `Position`, `HireDate` [cite: 55-65] |
-| **Orders** | Transaction and billing details. | [cite_start]`Order_No`, `Order_Items`, `Order_Total`, `Payment_method`, `Billing_Address` [cite: 46-54] |
+| **Passengers** | Stores customer personal data. | `PassengerID`, `FirstName`, `LastName`, `DateOfBirth`, `Gender`  |
+| **Bookings** | Links passengers to flights and tracks status. | `BookingID`, `PassengerID`, `FlightID`, `BookingDate`, `Status`  |
+| **Tickets** | Detailed pricing and seat info for bookings. | `TicketID`, `BookingID`, `SeatNumber`, `Class`, `Price`  |
+| **Flights** | Operational flight schedules and routes. | `FlightID`, `FlightNumber`, `DepartureAirport`, `ArrivalAirport`, `DepartureTime`, `PlaneID`  |
+| **Planes** | Fleet inventory, capacity, and specs. | `PlaneID`, `Model`, `Capacity`, `Manufacturer`, `YearOfManufacture`, `Status` |
+| **Crew** | Employee and assignment data. | `CrewID`, `FirstName`, `Position`, `HireDate`  |
+| **Orders** | Transaction and billing details. | `Order_No`, `Order_Items`, `Order_Total`, `Payment_method`, `Billing_Address` |
 
 ## DATA CLEANING/TRANSFORMATION
 Key transformations performed within the SQL queries include:
-* **Bucketing:** Grouping continuous variables into categorical ranges, such as Ticket Prices into `$0-$100`, `$101-$200` ranges [cite: 2225-2260].
+* **Bucketing:** Grouping continuous variables into categorical ranges, such as Ticket Prices into `$0-$100`, `$101-$200` ranges .
 * **Age Calculation:** Dynamically calculating Passenger Age and Plane Age using `DATEDIFF(YEAR, ..., GETDATE())`.
-* **Status Pivoting:** Transforming row-level Booking Statuses (Confirmed, Pending, Cancelled) into column-level metrics for monthly reporting [cite: 1826-1828].
+* **Status Pivoting:** Transforming row-level Booking Statuses (Confirmed, Pending, Cancelled) into column-level metrics for monthly reporting .
 
 ## DATA MODELLING
 The data follows a normalized relational model centered around the `Bookings` and `Flights` tables.
