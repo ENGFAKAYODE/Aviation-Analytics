@@ -645,15 +645,3 @@ GROUP BY CASE
         WHEN T.Price >= 101 THEN '101-200'
         WHEN T.Price < 101 THEN '0-100' END
 ORDER BY MIN(T.Price) 
-
-
-
-select * from [Air].[Bookings]
-select * from [Air].[Tickets]
-select * from [Air].[Flights]
-select * from [Air].[Crew]
-select * from [Air].[Planes]
-select * from [Air].[Passengers]
-select * from [Air].[Orders-1731674475]
-
-
