@@ -1,4 +1,5 @@
 # Aviation Industry Data Analysis (SQL)
+<img width="1036" height="546" alt="image" src="https://github.com/user-attachments/assets/823778ef-277c-438d-9340-e730dea439f1" />
 
 ## INTRODUCTION
 This project is part of the "SQL Projects on Aviation" series developed by **Afriq IQ (2025)**. It focuses on extracting actionable business intelligence from a relational database representing an airline's operations. The project simulates a real-world environment where data analysts must solve complex business scenarios ranging from fleet management to revenue optimization.
