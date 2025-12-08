@@ -1,4 +1,4 @@
-# Aviation Industry Data Analysis (SQL)
+# Aviation Industry Queries (SQL)
 <img width="1036" height="546" alt="image" src="https://github.com/user-attachments/assets/823778ef-277c-438d-9340-e730dea439f1" />
 
 ## INTRODUCTION
