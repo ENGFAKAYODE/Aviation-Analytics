@@ -103,10 +103,10 @@ join [Air].[Passengers] Pa
 -- Question 10
 with monthly_revenue as(
 select  Fl.FlightNumber,
-        datename(month, B.BookingDate) as Month,
-		datename(year, B.BookingDate) as Year,
-		BookingDate,
-        sum(T.Price) as Price
+        datename(month, Fl.DepartureTime) as Month,
+		datename(year, Fl.DepartureTime) as Year,
+        datepart(month, Fl.DepartureTime) as MonthNum,
+		sum(T.Price) as Price
 from [Air].[Tickets] T 
 join [Air].[Bookings] B 
      on B.BookingID  = T.BookingID
@@ -115,36 +115,18 @@ join [Air].[Flights] Fl
 where B.Status = 'Confirmed'
 group by Fl.FlightNumber,
          BookingDate,
-         datename(Year, B.BookingDate),
-		 datename(month, B.BookingDate)
+		 datepart(month, Fl.DepartureTime),
+		 datename(Year, Fl.Departuretime),
+		 datename(month, Fl.Departuretime)
 )
        
-select Year,
-       Month,
+select Month,
+       Year,
        FlightNumber,
 	   Price as Revenue,
-	   Rank() over(partition by Year, Month order by Price desc) as Revenue_Rank
+	   Rank() over(partition by MonthNum, Year order by Price desc) as Revenue_Rank
 from monthly_revenue
-order by Year, datepart(month, BookingDate),Revenue_Rank 
-
-WITH MonthlyRevenue AS ( 
-SELECT f.FlightNumber, 
-       YEAR(f.DepartureTime) AS Year, 
-       MONTH(f.DepartureTime) AS Month, 
-       SUM(t.Price) AS TotalRevenue 
-FROM Air.Flights f 
-JOIN Air.Bookings b ON f.FlightID = b.FlightID 
-JOIN Air.Tickets t ON b.BookingID = t.BookingID 
-WHERE b.Status = 'Confirmed'  -- Only consider confirmed bookings 
-GROUP BY f.FlightNumber, YEAR(f.DepartureTime), MONTH(f.DepartureTime) ) 
-
-SELECT Year, 
-       Month, 
-       FlightNumber, 
-       TotalRevenue, 
-       RANK() OVER (PARTITION BY Year, Month ORDER BY TotalRevenue DESC) AS  RevenueRank 
-FROM  MonthlyRevenue 
-ORDER BY Year, Month, RevenueRank; 
+order by Year, MonthNum, Revenue_Rank
 
 
 -- Question 11
