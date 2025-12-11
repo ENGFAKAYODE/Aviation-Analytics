@@ -1,6 +1,18 @@
 # Aviation Industry Queries (SQL)
 <img width="1036" height="546" alt="image" src="https://github.com/user-attachments/assets/823778ef-277c-438d-9340-e730dea439f1" />
 
+## TABLE OF CONTENT
+- [INTRODUCTION](#INTRODUCTION)
+- [OBJECTIVE](#objective)
+- [GOALS](#goals)
+- [SKILLS DEMONSTRATED](#skills-demonstrated)
+- [DATA OVERVIEW](#data-OVERVIEW)
+- [DATA TRANSFORMATION](data-transformation)
+- [DATA MODELLING](#data-MODELLING)
+- [ANALYSIS](#analysis)
+- [RECOMMENDATIONS](#recommendations)
+- [CONCLUSION](#conclusion)
+
 ## INTRODUCTION
 This project is part of the "SQL Projects on Aviation" series developed by **Afriq IQ (2025)**. It focuses on extracting actionable business intelligence from a relational database representing an airline's operations. The project simulates a real-world environment where data analysts must solve complex business scenarios ranging from fleet management to revenue optimization.
 
@@ -51,7 +63,7 @@ The database consists of the following relational tables based on the schema dia
 | **Crew** | Employee and assignment data. | `CrewID`, `FirstName`, `Position`, `HireDate`  |
 | **Orders** | Transaction and billing details. | `Order_No`, `Order_Items`, `Order_Total`, `Payment_method`, `Billing_Address` |
 
-## DATA CLEANING/TRANSFORMATION
+## DATA TRANSFORMATION
 Key transformations performed within the SQL queries include:
 * **Bucketing:** Grouping continuous variables into categorical ranges, such as Ticket Prices into `$0-$100`, `$101-$200` ranges .
 * **Age Calculation:** Dynamically calculating Passenger Age and Plane Age using `DATEDIFF(YEAR, ..., GETDATE())`.
