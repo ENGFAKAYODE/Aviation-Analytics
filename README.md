@@ -17,7 +17,7 @@
 This project is part of the "SQL Projects on Aviation" series developed by **Afriq IQ (2025)**. It focuses on extracting actionable business intelligence from a relational database representing an airline's operations. The project simulates a real-world environment where data analysts must solve complex business scenarios ranging from fleet management to revenue optimization.
 
 ## OBJECTIVE
-The primary objective is to demonstrate proficiency in **Structured Query Language (SQL)** by solving over 50 specific business scenarios. The project aims to convert raw operational data covering passengers, bookings, flights, and crew into structured insights that support strategic decision-making for the airline.
+The primary objective is to demonstrate proficiency in **Structured Query Language (SQL)** by solving over 50 specific business scenarios. The project aims to convert raw operational data covering passengers, bookings, flights, and crew into structured insights that support strategic decision-making for the airline. 
 
 ## PROBLEM STATEMENT
 The airline requires a comprehensive data system to address critical operational blind spots, specifically:
