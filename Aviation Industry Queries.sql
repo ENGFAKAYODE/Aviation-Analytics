@@ -98,10 +98,11 @@ join [Air].[Bookings] B
      on B.FlightID = Fl.FlightID
 join [Air].[Passengers] Pa 
      on B.PassengerID = Pa.PassengerID
+;
 
 
 -- Question 10
-with monthly_revenue as(
+;with monthly_revenue as(
 select  Fl.FlightNumber,
         datename(month, Fl.DepartureTime) as Month,
 		datename(year, Fl.DepartureTime) as Year,
@@ -118,8 +119,7 @@ group by Fl.FlightNumber,
 		 datepart(month, Fl.DepartureTime),
 		 datename(Year, Fl.Departuretime),
 		 datename(month, Fl.Departuretime)
-)
-       
+)     
 select Month,
        Year,
        FlightNumber,
@@ -164,10 +164,10 @@ select T.Class,
 from [Air].[Tickets] T join [Air].[Bookings] B
 on T.BookingID = B.BookingID
 where B.Status = 'Confirmed'
-group by T.Class
+group by T.Class ;
 
 -- Question 14
-with customer_info as(
+;with customer_info as(
 select distinct P.PassengerID,
        CONCAT(P.FirstName, ' ', P.LastName) as PassengerName,
 	   P.Gender,
@@ -187,6 +187,7 @@ from customer_info
 group by gender
 
 
+
 -- Question 15
 select F.FlightID,
        count(T.SeatNumber) as Seats_booked,
@@ -201,7 +202,7 @@ group by F.FlightID, P.Capacity
 order by count(T.BookingID)*100.0/P.Capacity desc
 
 -- Question 16
-with flights_per_user as (
+;with flights_per_user as (
 select CONCAT(P.FirstName, ' ', P.LastName) as Passenger_Name,
        count(F.FlightID) as Num_Flights
 from [Air].[Passengers] P join [Air].[Bookings] B
@@ -488,7 +489,7 @@ order by Week, Year
 
 
 -- Question 30
-WITH MonthlyStats AS (
+;WITH MonthlyStats AS (
     SELECT YEAR(BookingDate) AS BookingYear,
            MONTH(BookingDate) AS MonthNum,
            DATENAME(month, BookingDate) AS MonthName,
